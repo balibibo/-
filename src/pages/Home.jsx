@@ -19,7 +19,8 @@ class home extends Component {
         imgHeight: 176,
         slideIndex: 2,
         newCity: '定位中',
-        likes: []
+        likes: [],
+        isMounted: true
     };
     /* componentDidMount() {
       this.autoFocusInst.focus();
@@ -42,6 +43,8 @@ class home extends Component {
             /* eslint react/no-did-update-set-state: 0 */
             this.setState({ slideIndex: this.state.data.length - 1 });
         }
+
+
     }
 
     topPush(url) {
@@ -54,12 +57,18 @@ class home extends Component {
 
         // 获取猜你喜欢数据
         like().then(res => {
-            console.log(res.data)
-            this.setState({
-                likes: res.data
-            })
+            if (this.isMounted) {
+                console.log(res.data)
+                this.setState({
+                    likes: res.data
+                })
+            }
         })
 
+    }
+
+    componentWillUnMount= () => {
+        this.isMounted = false;
     }
 
     //获取用户所在城市信息
@@ -130,8 +139,8 @@ class home extends Component {
                     autoplay={false}
                     infinite
                     selectedIndex={this.state.slideIndex}
-                    // beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
-                    // afterChange={index => console.log('slide to', index)}
+                // beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
+                // afterChange={index => console.log('slide to', index)}
                 >
                     {this.state.data.map((val, index) => (
                         <a
@@ -222,7 +231,7 @@ class home extends Component {
                     <div>
                         {
                             this.state.likes.map((v, i) => {
-                                return <div onClick={this.addfoot.bind(this,v)} key={i} className="likelist">
+                                return <div onClick={this.addfoot.bind(this, v)} key={i} className="likelist">
                                     <div className="likeimg">
                                         <img src={IP + v.imgs} alt="" />
                                     </div>

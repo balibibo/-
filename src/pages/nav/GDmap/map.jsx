@@ -35,7 +35,7 @@ export default class map extends Component {
         var map = new window.AMap.Map("map", {
             resizeEnable: true,             // 是否监视浏览器变化，并重新绘制
             center: [116.397428, 39.90923],  // 经纬度设置
-            zoom: 18
+            zoom: 30
         });
         //实例化城市查询类    模块化后作用域查找范围只会在当前文件 ， 作用域链最顶级是当前模块本身
         var citysearch = new window.AMap.CitySearch();
@@ -46,11 +46,12 @@ export default class map extends Component {
         citysearch.getLocalCity((status, result) => {
             if (status === 'complete' && result.info === 'OK') {
                 if (result && result.city && result.bounds) {
-                    var cityinfo = result.city;
+                    // var cityinfo = result.city;
                     var citybounds = result.bounds;
-                    console.log('当前城市'+cityinfo)
+                    // console.log('当前城市'+cityinfo)
                     //地图显示当前城市
                     map.setBounds(citybounds);  // 为当前实例地图重绘当前位置
+                    map.setZoom(16);
                 }
             } else {
                 console.log('执行失败',result.info);
