@@ -1,0 +1,107 @@
+.mytop-bg{
+    background-color: #5ECAFC;
+
+    .mytop{
+        display: flex;
+        padding: 20px;
+        
+    
+        .mytop-l{
+            width: 70px;
+            height: 70px;
+            margin-right: 20px;
+            
+    
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        
+        .mytop-r{
+            flex: 1;
+    
+            .mytop-login{
+                font-size: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 30px;
+                a{
+                    color: #fff;
+                }
+    
+                img{
+                    height: 80%;
+                }
+            }
+    
+            p{
+                line-height: 22px;
+                color: #fff;
+            }
+    
+        }
+    
+    }
+
+    .myinfo{
+        padding: 0px 0px 30px;
+
+        .myinfo-div{
+            width: 34%;
+            text-align: center;
+            padding: 0px 20px;
+            color: #fff;
+            font-size: 18px;
+
+            .myinfo-img{
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+                line-height: 40px;
+                height: 30px;
+
+
+                img{
+                    height: 100%;
+                }
+
+            }
+        }
+        .myinfo-div:not(:last-child){
+            border-right: 2px solid #fff;
+        }
+
+    }
+}
+
+//下方内容
+
+.myline{
+    border-top: 10px solid #F4F4F4;
+    border-bottom: 10px solid #F4F4F4;
+
+    .myother{
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        border-bottom: 2px solid #DEDEDE;
+
+
+        .myother-img{
+            height: 30px;
+            display: flex;
+            align-items: center;
+
+            span{
+                margin-left: 10px;
+            }
+            img{
+                height: 100%;
+            }
+        }
+    }
+
+}

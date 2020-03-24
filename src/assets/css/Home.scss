@@ -1,0 +1,145 @@
+
+.top-search{
+    display: flex;
+    align-items: center;
+    background-color: #5ECAFC;
+    padding: 4px;
+    height: 50px;
+    .city{
+        padding-left:4px;
+        padding-right:8px;
+        width: 80px;
+        color: #fff;
+        font-size: 16px;
+    }
+
+    .searchdiv{
+        
+        input{
+            border: 0;
+            height: 40px;
+            width: 100%;
+        }
+    }
+    
+    .map{
+        flex: 1;
+        width: 40px;
+        text-align: center;
+
+        img{
+            width: 30px;
+        }
+    }
+}
+
+.productdiv{
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    .productdd{
+        margin: 8px 0px;
+        width: 25%;
+        
+        .productimg{
+            display: inline-block;
+            width: 46px;
+            height: 46px;
+            background-color: #FF5A5F;
+            border-radius: 31px;
+            padding: 8px;
+
+            img{
+                width: 80%;
+                margin-top: 4px;
+            }
+        }
+        p{
+            margin-top: 8px;
+            color: #979797;
+        }
+        
+    }
+}
+.relevant{
+    padding: 12px 20px;
+    border-top: 10px solid #F5F5F9;
+    border-bottom: 10px solid #F5F5F9;
+
+    color: #979797;
+    span{
+        color: #00BC5B;
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .relevantdiv{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        margin-top: 8px;
+    
+        .relevantimg{
+            width: 50px;
+            padding: 2px;
+    
+            img{
+                width: 80%
+            }
+        }
+    
+    }
+}
+.like{
+    padding: 10px;
+    .liketitle{
+        font-size: 16px;
+        margin-left: 10px;   
+    }
+    // 喜欢列表
+    .likelist{
+        display: flex;
+        margin: 10px;
+        
+        // 左边图片设置
+        .likeimg{
+            width: 100px;
+            height: 110px;
+            margin-right: 10px;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        // 右边信息设置
+        .likeinfo{
+            flex: 1;
+            color: #979797;
+            line-height: 24px;
+
+            .likeplace{
+                display:flex;
+                justify-content: space-between;
+                align-items: baseline; // 基线对齐
+                
+                span:first-child{
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #000000;
+                }
+                span:last-child{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #FF4747;
+                }
+            }
+
+        }
+    }
+}
