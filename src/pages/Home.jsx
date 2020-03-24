@@ -55,9 +55,10 @@ class home extends Component {
     componentDidMount() {
         this.showCityInfo()
 
+
         // 获取猜你喜欢数据
         like().then(res => {
-            if (this.isMounted) {
+            if (this.state.isMounted) {
                 console.log(res.data)
                 this.setState({
                     likes: res.data
