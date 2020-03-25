@@ -20,7 +20,6 @@ class home extends Component {
         slideIndex: 2,
         newCity: '定位中',
         likes: [],
-        isMounted: true
     };
     /* componentDidMount() {
       this.autoFocusInst.focus();
@@ -58,19 +57,21 @@ class home extends Component {
 
         // 获取猜你喜欢数据
         like().then(res => {
-            if (this.state.isMounted) {
-                console.log(res.data)
-                this.setState({
-                    likes: res.data
-                })
-            }
+            console.log(res.data)
+            this.setState({
+                likes: res.data
+            })
         })
 
     }
 
-    componentWillUnMount= () => {
-        this.isMounted = false;
+    componentWillUnmount(){
+        // 卸载异步操作设置状态
+        this.setState = (state, callback) => {
+          return;
+        }
     }
+
 
     //获取用户所在城市信息
     showCityInfo() {

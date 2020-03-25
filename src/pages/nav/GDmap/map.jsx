@@ -24,10 +24,15 @@ export default class map extends Component {
 
     // 在页面刚加载时就去，获取用户用户所在城市信息
     componentDidMount(){
-
-        
         this.showCityInfo()
     }
+
+    /* componentWillUnmount(){
+        // 卸载异步操作设置状态
+        this.setState = (state, callback) => {
+          return;
+        }
+    } */
 
     //获取用户所在城市信息
     showCityInfo() {

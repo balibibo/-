@@ -9,6 +9,7 @@ import Reg from "./pages/Reg"
 import City from './pages/nav/citySearch/City'
 import Nav from './pages/Nav'
 import Maps from './pages/nav/GDmap/map'
+import Search from './pages/nav/huoseSearch/search'
 
 import Error404 from './pages/Error404'
 
@@ -26,6 +27,7 @@ export default class App extends Component {
             <Route path="/city" component={City}></Route>
             <Route path="/" exact component={Nav}></Route>
             <Route path="/map" component={Maps}></Route>
+            <Route path="/search" component={Search}></Route>
 
             <Route component={Error404}></Route>
           </Switch>
